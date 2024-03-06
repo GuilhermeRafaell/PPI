@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Cadastro</title>
+    <style>
+        body {
+            background-color: lightgrey;
+            font-family: "Helvetica Neue", sans-serif;
+            color: #444;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        main {
+            max-width: 300px;
+            background-color: white;
+            border: 1px solid grey;
+            border-radius: 10px;
+            box-shadow: 0 0 10px grey;
+            padding: 20px;
+        }
+
+        form {
+            padding: 25px;
+            box-sizing: border-box;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+        }
+
+        input:focus {
+            outline: none;
+            box-shadow: 0 0 5px grey;
+        }
+
+        form button {
+            width: 100%;
+            margin-top: 10px;
+            background-color: #444;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        span {
+            color: red;
+            margin: 5px 0;
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <h3>Cadastro de Usuário</h3>
+        <form name="formCadastro" action="action.php" method="post">
+            <div>
+                <label for="usuario">Usuário:</label>
+                <input type="text" name="usuario" id="usuario" autocomplete="off">
+                <span></span>
+            </div>
+            <div>
+                <label for="senha">Senha:</label>
+                <input type="password" name="senha" id="senha">
+                <span></span>
+            </div>
+            <div>
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" autocomplete="off">
+                <span></span>
+            </div>
+            <div>
+                <button type="submit">Cadastrar</button>
+            </div>
+        </form>
+    </main>
+
+    <script>
+        window.onload = function () {
+            document.forms.formCadastro.onsubmit = validaForm;
+        }
+
+        function validaForm(e) {
+            e.preventDefault();
+            let form = e.target;
+            let formValido = true;
+
+            const spanUsuario = form.usuario.nextElementSibling;
+            const spanSenha = form.senha.nextElementSibling;
+            const spanEmail = form.email.nextElementSibling;
+
+            spanUsuario.textContent = '';
+            spanSenha.textContent = '';
+            spanEmail.textContent = '';
+
+            if (form.usuario.value.trim() === '') {
+                spanUsuario.textContent = 'Preencha o campo Nome de usuário';
+                formValido = false;
+            }
+
+            if (form.senha.value.trim() === '') {
+                spanSenha.textContent = 'Preencha o campo Senha';
+                formValido = false;
+            }
+
+            if (form.email.value.trim() === '') {
+                spanEmail.textContent = 'Preencha o campo Email';
+                formValido = false;
+            }
+
+            return formValido;
+        }
+    </script>
+</body>
+
+</html>

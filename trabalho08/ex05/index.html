@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Trabalho 5</title>
+</head>
+
+<body>
+    <main>
+        <h1>A FACOM</h1>
+        <p>Faculdade de Computação (FACOM) da Universidade
+        Federal de Uberlândia (UFU) é uma das mais importantes do Brasil. Foi criada em 
+        2000, e desde então tem formado profissionais de alta qualidade. A FACOM oferece
+        cursos de graduação em Ciência da Computação, Engenharia de Computação e Sistemas
+        de Informação, além de programas de pós-graduação em Ciência da Computação.</p>
+
+        <p>Além disso, a FACOM é um centro de pesquisa de ponta, com grupos de pesquisa
+        em diversas áreas da computação, como Inteligência Artificial e Engenharia de Software</p>
+    
+        <button type="button" id="btnOpenModal">Abrir Modal</button>
+    </main>
+
+    <div id="modalTeste" class="modal">
+
+        <div class="modalContent">
+            <h2>Ola! Seja bem Vindo!</h2>
+            <button class="buttonClose">Ok</button>
+        </div>
+
+    </div>
+
+    <script>
+        window.onload = function() {
+            const modal = document.querySelector('.modal');
+            const buttonClose = modal.querySelector('.buttonClose');
+
+            buttonClose.addEventListener('click', function() {
+                modal.style.display = 'none';
+            });
+
+            const btnOpenModal = document.getElementById('btnOpenModal');
+            btnOpenModal.addEventListener('click', function() {
+                modal.style.display = 'block';
+            });
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+main{
+    width: 200px;
+    max-width: 300px;
+    padding: 20px 20px;
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 5px;
+    box-shadow: 0 0 10px #555;
+}
+
+body{
+    background-color: #acaaaa;
+}
+
+label{
+    color: #555;
+}
+
+input,
+button{
+    width: 100%;
+    padding: 0.4rem;
+    margin: 0.5rem 0;
+    outline: none;
+    border: 0.5px solid gray;
+    box-sizing: border-box;
+}
+
+.material-symbols-outlined {
+    font-family: 'Material Symbols Outlined', sans-serif;
+    font-size: 24px;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+button {
+    align-items: center; 
+    justify-content: center; 
+    
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #3d86d55d;
+    cursor: pointer;
+}

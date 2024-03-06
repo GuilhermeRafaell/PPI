@@ -1,0 +1,82 @@
+body{
+    margin: 0;
+    background-color: rgb(193, 193, 193);
+}
+nav{
+    top: 0;
+    background-color: rgb(74, 73, 73);
+    width: 75%;
+    text-align: justify;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+
+nav li{
+    padding: 25px 5px;
+    width: 100px;
+    display: inline-block;
+    font-size: large;
+}
+ul{
+    margin: 8px;
+    text-align: center;
+    padding-left: 0;
+}
+
+nav li a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1{
+    background-color: rgb(74, 73, 73);
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 70%;
+    text-align: center;
+    margin: 40px auto;
+    margin-bottom: 0;
+    padding: 30px;
+    border-radius: 10px;
+}
+h2{
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 30px 0 0 20px;
+    color: gray;
+    margin-top: 0;
+}
+
+main{
+    text-align: justify;
+    width: 75%;
+    margin: 0px auto;
+    background-color: white;
+    border-radius: 10px;
+}
+
+table{
+    padding: 10px 10px 8px 20px;
+}
+
+td{
+    padding-left: 10px;
+}
+
+table td img{
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+footer{
+    text-align: center;
+    background-color: rgb(74, 73, 73);
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 70%;
+    text-align: center;
+    margin: 10px auto;
+    padding: 30px;
+    border-radius: 10px;
+}

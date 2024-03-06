@@ -1,0 +1,84 @@
+/* Estilização geral */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+/* Seletor de ID */
+#meuId {
+    color: #0066cc;
+}
+
+input:invalid+span::after {
+    content: '✖';
+    color: red;
+}
+
+input:valid+span::after {
+    content: '✓';
+    color: green;
+}
+
+/* Seletor de classe */
+.minhaClasse {
+    font-weight: bold;
+}
+
+/* Seletor de descendente */
+nav ul {
+    list-style-type: none;
+}
+
+/* Seletor de irmão adjacente */
+h1+p {
+    font-size: 1.2em;
+}
+
+/* Estilos de links com pseudo-classes */
+a:link {
+    color: #0066cc;
+}
+
+a:visited {
+    color: #003399;
+}
+
+a:hover {
+    color: #0099ff;
+}
+
+a:active {
+    color: #cc0000;
+}
+
+/* Pseudo-classe :has */
+div:has(p) {
+    background-color: #f0f0f0;
+}
+
+/* Pseudo-classe :is */
+p:is(.destaque, .importante) {
+    font-weight: bold;
+}
+
+/* Pseudo-classe :first-child */
+ul li:first-child {
+    color: #cc0000;
+}
+
+/* Pseudo-classe :first-of-type */
+p:first-of-type {
+    font-size: 1.2em;
+}
+
+/* Ícones de validação de formulário */
+input:invalid::after {
+    content: "✖";
+    color: #cc0000;
+}
+
+input:valid::after {
+    content: "✓";
+    color: #009900;
+}
