@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../assets/css/style.css">
+    <link rel="stylesheet" href="../../../assets/css/media.css">
+    <link rel="stylesheet" href="../../../assets/css/bootstrap.min.css">
+    <script type="module" src="../../../assets/js/validaLogin.js"></script>
+    <script src="../../../assets/js/bootstrap.bundle.min.js"></script>
+    <title>Galeria</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-xl navbar-dark fixed-top" id="navbar">
+            <a class="navbar-brand" href="../../../../index.html">
+                <div class="d-flex align-items-center" id="logo-items-flex">
+                    <img src="../../../assets/images/logotipo.jpg" class="logo" id="logo" alt="Logomarca CiniSimples">
+                    <h1 id="ClínicaVitalis" class="ml-2">ClínicaVitalis</h1>
+                </div>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link color-white" href="../../../../index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link color-white" href="sobre.html">Sobre</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link color-white" href="acesso.html">Acesso</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="pre-cadastro">
+                <div class="row">
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                        <img src="../../../assets/images/Clinica1.jpg" title="Clinica 1" alt="Clinica 1" height="120" width="120">
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                        <img src="../../../assets/images/Clinica2.jpg" title="Clinica 2" alt="Clinica 2" height="120" width="120">
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                        <img src="../../../assets/images/Clinica3.jpg" title="Clinica 3" alt="Clinica 3" height="120" width="120">
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                        <img src="../../../assets/images/Clinica4.jpg" title="Clinica 4" alt="Clinica 4" height="120" width="120">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                        <img src="../../../assets/images/Clinica5.jpg" title="Clinica 5" alt="Clinica 5" height="150" width="150">
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                        <img src="../../../assets/images/Clinica6.jpg" title="Clinica 6" alt="Clinica 6" height="150" width="150">
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                        <img src="../../../assets/images/Clinica7.jpg" title="Clinica 7" alt="Clinica 7" height="150" width="150">
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                        <img src="../../../assets/images/Clinica8.jpg" title="Clinica 8" alt="Clinica 8" height="150" width="150">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        window.onload = function () {
+            var images = document.querySelectorAll('img');
+
+            images.forEach(function (img) {
+                img.addEventListener('mouseover', function () {
+                    this.style.boxShadow = '0px 0px 10px 3px white';
+                });
+                
+                img.addEventListener('mouseout', function () {
+                    this.style.boxShadow = 'none';
+                });
+            });
+        };
+    </script>
+</body>
