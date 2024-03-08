@@ -90,10 +90,10 @@ nav li>a:hover {
     margin-bottom: 50px;
 }
 
-#dropdown-menu{
+#dropdown-menu {
     background-color: rgba(43, 100, 102, 1);
     color: white;
-    width: 50%;
+    width: 100%;
     text-align: center;
     margin: 0 auto;
 }
@@ -101,6 +101,7 @@ nav li>a:hover {
 #dropdown-item {
     color: white;
     cursor: pointer;
+    padding: unset;
 }
 
 #dropdownlist {
