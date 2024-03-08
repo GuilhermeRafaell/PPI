@@ -93,15 +93,15 @@ nav li>a:hover {
 #dropdown-menu {
     background-color: rgba(43, 100, 102, 1);
     color: white;
-    width: 100%;
+    width: 50%;
     text-align: center;
     margin: 0 auto;
+    border: none;
 }
 
 #dropdown-item {
     color: white;
     cursor: pointer;
-    padding: unset;
 }
 
 #dropdownlist {
@@ -159,7 +159,13 @@ nav li>a:hover {
     margin-top: 40px;
 }
 
-
+#table{
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    min-width: 480px;
+    border-radius: 8px;
+}
 
 /* home page */
 #homePage {
