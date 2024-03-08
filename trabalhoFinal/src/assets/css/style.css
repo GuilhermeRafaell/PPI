@@ -49,12 +49,12 @@ footer {
 }
 
 /* header */
-#logo{
+#logo {
     height: 7.692vh;
     width: auto;
 }
 
-#logo-text{
+#logo-text {
     font-size: 28px;
 }
 
@@ -92,11 +92,11 @@ nav li>a:hover {
     background-color: rgba(32, 63, 60, 0.5);
 }
 /* Alinhamento da logo */
-#logo-items-flex{
+#logo-items-flex {
     display: flex;
     align-items: center;
     justify-content: center;
-    
+
     flex-direction: row;
 }
 
@@ -294,7 +294,7 @@ nav li>a:hover {
     padding: 0;
 }
 
-@media (max-width: 1200px){
+@media (max-width: 1200px) {
     .col-lg-3.col-md-4.col-sm-6.col-xs-12 img {
         width: 90%;
     }
