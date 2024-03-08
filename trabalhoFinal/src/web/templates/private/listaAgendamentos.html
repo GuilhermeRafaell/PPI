@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../assets/css/style.css">
+    <link rel="stylesheet" href="../../../assets/css/media.css">
+    <link rel="stylesheet" href="../../../assets/css/bootstrap.min.css">
+    <script src="../../../assets/js/bootstrap.bundle.min.js"></script>
+    <title>ClínicaVitalis</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-xl navbar-dark fixed-top" id="navbar">
+            <a class="navbar-brand" href="#">
+                <div class="d-flex align-items-center">
+                    <img src="../../../assets/images/logotipo.jpg" class="logo" id="logo" alt="Logomarca CiniSimples">
+                    <h1 id="ClínicaVitalis" class="ml-2">ClínicaVitalis</h1>
+                </div>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto" id="dropdownlist">
+                    <li class="nav-item active">
+                        <a class="nav-link color-white" href="../../../../index_2.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle color-white" href="#" id="listarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Cadastrar
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="listarDropdown">
+                            <a class="dropdown-item" href="./cadastroPaciente.html">Novo
+                                Paciente</a>
+                            <a class="dropdown-item" href="./cadastroFuncionario.html">Novo
+                                Funcionário</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle color-white" href="#" id="listarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Relatórios
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="listarDropdown">
+                            <a class="dropdown-item" href="./listaPaciente.html">Listar
+                                Pacientes</a>
+                            <a class="dropdown-item" href="./listaFuncionario.html">Listar
+                                Funcionários</a>
+                            <a class="dropdown-item" href="./listaEndereco.html">Listar
+                                Endereços</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle color-white" href="#" id="listarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Agenda
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="listarDropdown">
+                            <a class="dropdown-item" href="./listaAgendamentos.html">Listar Agendamentos</a>
+                            <a class="dropdown-item" href="./listaAgenda.html">Meus
+                                Agendamentos</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link color-white" href="../../../../index.html">Público</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link color-white" href="./login.html">Login</a>
+                    </li>
+
+                </ul>
+            </div>
+
+        </nav>
+    </header>
+
+    <main>
+        <div class="container-fluid">
+            <div class= "table-responsive" id="homePage">
+                    <h1 class="text-center mt-4">Agendamentos: 01/03/2024 a 31/03/2024</h1>
+                    <table class="table table-bordered bg-black mt-4" >
+                        <thead>
+                            <tr>
+                                <th scope="col">Paciente</th>
+                                <th scope="col">Telefone</th>
+                                <th scope="col">Médico</th>
+                                <th scope="col">Especialidade</th>
+                                <th scope="col">Data</th>
+                                <th scope="col">Hora</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>João da Silva</td>
+                                <td>(31) 98765-4321</td>
+                                <td>Dr. Carlos</td>
+                                <td>Cardiologia</td>
+                                <td>10/03/2024</td>
+                                <td>15:30</td>
+                            </tr>
+                            <tr>
+                                <td>Maria Souza</td>
+                                <td>(34) 99999-8888</td>
+                                <td>Dra. Ana</td>
+                                <td>Ginecologia</td>
+                                <td>12/03/2024</td>
+                                <td>09:00</td>
+                            </tr>
+                            <tr>
+                                <td>Carlos Oliveira</td>
+                                <td>(11) 55555-1234</td>
+                                <td>Dr. Pedro</td>
+                                <td>Ortopedia</td>
+                                <td>15/03/2024</td>
+                                <td>14:00</td>
+                            </tr>
+                            <tr>
+                                <td>Ana Rodrigues</td>
+                                <td>(21) 98765-4321</td>
+                                <td>Dra. Laura</td>
+                                <td>Dermatologia</td>
+                                <td>18/03/2024</td>
+                                <td>11:30</td>
+                            </tr>
+                            <tr>
+                                <td>Fernando Santos</td>
+                                <td>(47) 33333-9999</td>
+                                <td>Dr. André</td>
+                                <td>Oftalmologia</td>
+                                <td>20/03/2024</td>
+                                <td>16:45</td>
+                            </tr>
+                            <tr>
+                                <td>Luciana Oliveira</td>
+                                <td>(51) 12345-6789</td>
+                                <td>Dra. Paula</td>
+                                <td>Pediatria</td>
+                                <td>22/03/2024</td>
+                                <td>10:15</td>
+                            </tr>
+                            <tr>
+                                <td>Ricardo Santos</td>
+                                <td>(19) 98765-4321</td>
+                                <td>Dr. Gustavo</td>
+                                <td>Clínico Geral</td>
+                                <td>25/03/2024</td>
+                                <td>14:30</td>
+                            </tr>
+                            <tr>
+                                <td>Camila Rodrigues</td>
+                                <td>(27) 55555-9999</td>
+                                <td>Dra. Fernanda</td>
+                                <td>Neurologia</td>
+                                <td>28/03/2024</td>
+                                <td>16:00</td>
+                            </tr>
+                        </tbody>
+                    </table>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>ClínicaVitalis - Trabalho Parte 1 PPI</p>
+    </footer>
+</body>
+
+</html>

@@ -149,6 +149,8 @@ nav li>a:hover {
     margin: 10px;
     color: silver;
     padding: 40px;
+    position: relative;
+    z-index: 1;
     border-radius: 15px;
     background-color: rgb(105, 137, 138);
     font-size: 1.5rem;

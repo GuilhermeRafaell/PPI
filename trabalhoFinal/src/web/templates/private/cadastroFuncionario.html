@@ -20,7 +20,7 @@
         <nav class="navbar navbar-expand-xl navbar-dark fixed-top" id="navbar">
             <a class="navbar-brand" href="../../../../index.html">
                 <div class="d-flex align-items-center">
-                    <img src="../../../assets/images/logotipo.jpg" class="logo" alt="Logomarca CiniSimples">
+                    <img src="../../../assets/images/logotipo.jpg" class="logo" id="logo" alt="Logomarca CiniSimples">
                     <h1 id="ClínicaVitalis" class="ml-2">ClínicaVitalis</h1>
                 </div>
             </a>
@@ -31,21 +31,57 @@
             </button>
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
+                <ul class="navbar-nav ml-auto" id="dropdownlist">
                     <li class="nav-item active">
-                        <a class="nav-link color-white" href="../../../../index_2.html">Home</a>
+                        <a class="nav-link color-white" href="./index_2.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle color-white" href="#" id="listarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Cadastrar
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="listarDropdown">
+                            <a class="dropdown-item" href="./cadastroPaciente.html">Novo
+                                Paciente</a>
+                            <a class="dropdown-item" href="./cadastroFuncionario.html">Novo
+                                Funcionário</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle color-white" href="#" id="listarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Relatórios
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="listarDropdown">
+                            <a class="dropdown-item" href="./listaPaciente.html">Listar
+                                Pacientes</a>
+                            <a class="dropdown-item" href="./listaFuncionario.html">Listar
+                                Funcionários</a>
+                            <a class="dropdown-item" href="./listaEndereco.html">Listar
+                                Endereços</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle color-white" href="#" id="listarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Agenda
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="listarDropdown">
+                            <a class="dropdown-item" href="./listaAgendamentos.html">Listar Agendamentos</a>
+                            <a class="dropdown-item" href="./listaAgenda.html">Meus
+                                Agendamentos</a>
+                        </div>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link color-white" href="./sobre.html">Sobre</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link color-white" href="./cadastro.html">Cadastro</a>
+                        <a class="nav-link color-white" href="../../../../index.html">Público</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link color-white" href="./login.html">Login</a>
                     </li>
+
                 </ul>
             </div>
+
         </nav>
     </header>
 
