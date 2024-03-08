@@ -88,6 +88,9 @@ nav li>a:hover {
     margin-left: 2%;
 }
 
+#dropdownlist {
+    background-color: rgba(32, 63, 60, 0.5);
+}
 /* Alinhamento da logo */
 #logo-items-flex{
     display: flex;

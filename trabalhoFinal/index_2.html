@@ -27,30 +27,37 @@
             </button>
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ml-auto">
+                <ul class="navbar-nav ml-auto" id="dropdownlist">
                     <li class="nav-item active">
                         <a class="nav-link color-white" href="./index_2.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link color-white" href="./src/web/templates/private/cadastroFuncionario.html">Novo Funcionário</a>
+                        <a class="nav-link color-white" href="./src/web/templates/private/cadastroFuncionario.html">Novo
+                            Funcionário</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link color-white" href="./src/web/templates/private/cadastroPaciente.html">Novo Paciente</a>
+                        <a class="nav-link color-white" href="./src/web/templates/private/cadastroPaciente.html">Novo
+                            Paciente</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link color-white" href="./src/web/templates/private/listaPaciente.html">Listar Pacientes</a>
+                        <a class="nav-link color-white" href="./src/web/templates/private/listaPaciente.html">Listar
+                            Pacientes</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link color-white" href="./src/web/templates/private/listaFuncionario.html">Listar Funcionários</a>
+                        <a class="nav-link color-white" href="./src/web/templates/private/listaFuncionario.html">Listar
+                            Funcionários</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link color-white" href="./src/web/templates/private/listaEndereco.html">Listar Endereços</a>
+                        <a class="nav-link color-white" href="./src/web/templates/private/listaEndereco.html">Listar
+                            Endereços</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link color-white" href="./src/web/templates/private/listaAgendamento.html">Listar Agendamentos</a>
+                        <a class="nav-link color-white" href="./src/web/templates/private/listaAgendamento.html">Listar
+                            Agendamentos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link color-white" href="./src/web/templates/private/listaAgenda.html">Listar Meus Agendamentos</a>
+                        <a class="nav-link color-white" href="./src/web/templates/private/listaAgenda.html">Listar Meus
+                            Agendamentos</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link color-white" href="./index.html">Página Pública</a>
@@ -93,6 +100,12 @@
     <footer>
         <p>ClínicaVitalis - Trabalho Parte 1 PPI</p>
     </footer>
+
+    <script>
+        document.querySelector('.navbar-toggler').addEventListener('click', function () {
+            this.classList.toggle('active');
+        });
+    </script>
 </body>
 
 </html>
