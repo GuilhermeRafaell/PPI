@@ -91,6 +91,7 @@
                             </div>
 
                             <div class="col-sm-6">
+                                <div class="form-floating">
                                 <select name="sexo" id="sexo" class="form-select">
                                     <option value="">Sexo</option>
                                     <option value="Masculino">Masculino</option>
@@ -100,6 +101,7 @@
                                 <div class="alert alert-danger alert-dismissible" id="alertaSexo">
                                     <span>O sexo deve ser preenchido!</span>
                                 </div>
+                            </div>
                             </div>
                         </div>
 
@@ -129,6 +131,7 @@
                         <legend>Dados profissionais</legend>
                         <div class="row" >
                             <div class="col-sm-6">
+                                <div class="form-floating">
                                 <select name="especialidade" id="especialidade" class="form-select" >
                                     <option value="">Especialidade</option>
                                     <option value="nutricionista">Nutricionista</option>
@@ -136,14 +139,16 @@
                                     <option value="endocrinologista">Endócrinologista</option>
                                     <option value="psiquiatra">Psiquiatra</option>
                                 </select>
+                                
                                 <div class="alert alert-danger alert-dismissible" id="alertaEspecialidade">
                                     <span>A especialidade deve ser preenchida!</span>
+                                </div>
                                 </div>
                             </div>
                             <div class="col-sm-6">
                                 <div class="form-floating">
                                     <input class="form-control" type="text" id="regpro" name="regpro" placeholder=" ">
-                                    <label for="regpro">Registro profissional</label>
+                                    <label for="regpro">CRM</label>
                                     <div class="alert alert-danger alert-dismissible" id="alertaRegpro">
                                         <span>O registro profissional dever ser preenchido!</span>
                                     </div>
@@ -212,6 +217,7 @@
                                 </div>
                             </div>
                             <div class="col-sm-6">
+                                <div class ="form-floating">
                                 <select class="form-select" name="estado" id="estado">
                                     <option value=""> Estado</option>
                                     <option value="AC">Acre</option>
@@ -246,9 +252,9 @@
                                     <span>O estado deve ser selecionado!</span>
                                 </div>
                             </div>
+                            </div>
                         </div>
                     </fieldset>
-
                     <button class="btn btn-success col-sm-12" id="botao">Cadastrar</button>
                 </div>
             </div>
