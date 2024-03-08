@@ -82,13 +82,29 @@ nav li>a:hover {
     color: white;
 }
 
+
+
 .navbar-toggler {
     margin-right: 20px;
     margin-left: 2%;
+    margin-bottom: 50px;
+}
+
+#dropdown-menu{
+    background-color: rgba(43, 100, 102, 1);
+    color: white;
+    width: 50%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+#dropdown-item {
+    color: white;
+    cursor: pointer;
 }
 
 #dropdownlist {
-    background-color: rgba(32, 63, 60, 0.7);
+    background-color: rgba(43, 100, 102, 1);
 }
 
 #logo-items-flex {
