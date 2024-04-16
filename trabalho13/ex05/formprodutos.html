@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Seleção de Produtos</title>
+    <!-- 2: Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <style>
+        body {
+            padding: 1rem;
+        }
+
+        button {
+            margin-top: 1rem;
+        }
+
+        p {
+            margin-top: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <main>
+            <h1>Selecione uma Marca</h1>
+            
+            <label for="marca">Marca</label>
+            <select id="marca">
+                <option value="">Selecione uma marca</option>
+                <option value="Samsung">Samsung</option>
+                <option value="Apple">Apple</option>
+                <option value="Sony">Sony</option>
+                <!-- Adicione mais opções conforme necessário -->
+            </select>
+
+            <div id="produtos"></div>
+        </main>
+    </div>
+    <p><a href="../index.html">Menu de opções</a></p>
+
+    <script>
+        document.getElementById('marca').addEventListener('change', async function () {
+            let marca = this.value;
+            if (marca) {
+                let response = await fetch(`busca-produto.php?marca=${marca}`);
+                let produtos = await response.json();
+                let produtosDiv = document.getElementById('produtos');
+                produtosDiv.innerHTML = '';
+                for (let produto of produtos) {
+                    produtosDiv.innerHTML += `<h2>${produto.nome_do_produto}</h2><p>${produto.descricao}</p>`;
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>

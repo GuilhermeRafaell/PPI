@@ -86,7 +86,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </main>
 
     <footer>
-        <p>CliniSimples - Trabalho final PPI</p>
+        <p>ClínicaVitalis - Trabalho final PPI</p>
     </footer>
 </body>
 

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Rolagem Infinita</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      background-color: #dedede;
+      font-family: Helvetica;
+      width: 60%;
+      margin: 0 auto;
+      margin-top: 3rem;
+    }
+
+    h2 {
+      font-size: 2.5rem;
+      color: #888;
+    }
+
+    .item {
+      background-color: white;
+      padding: 1rem;
+      margin: 1rem 0;
+    }
+
+    .item-image {
+      width: 150px;
+      height: 150px;
+      margin: 0 2rem;
+    }
+
+    .item-name {
+      font: 2em Verdana;
+      color: #888;
+    }
+
+    .item-price {
+      font: 2em Verdana;
+      color: darkgreen;
+      margin-left: 2rem;
+    }
+
+    .item-price::before {
+      content: 'R$ ';
+    }
+  </style>
+</head>
+
+<body>
+
+  <section id="products">
+    <h2>Nossos produtos</h2>
+
+    <template id="template">
+      <div class="item">
+        <img class="item-image" src="images/{{prod-image}}"></img>
+        <span class="item-name">{{prod-name}}</span>
+        <span class="item-price">{{prod-price}}</span>
+      </div>
+    </template>
+
+  </section>
+
+  <script>
+  // Função para renderizar os produtos na página
+  function renderProducts(products) {
+    for (let product of products) {
+      let html = productTemplate
+        // Substitui as chaves de modelo pelos valores do produto
+        .replace("{{prod-image}}", product.imagePath)
+        .replace("{{prod-name}}", product.name)
+        .replace("{{prod-price}}", product.price);
+
+      // Insere o HTML do produto no final da seção de produtos
+      prodsSection.insertAdjacentHTML("beforeend", html);
+    };
+  }
+
+  // Função assíncrona para carregar os produtos do servidor
+  async function loadProducts() {
+    try {
+      // Faz uma solicitação ao servidor para obter os produtos
+      let response = await fetch("more-products.php");
+      // Se a resposta não for bem-sucedida, lança um erro
+      if (!response.ok) throw new Error(response.statusText);
+      // Converte a resposta em JSON
+      var products = await response.json();
+    }
+    catch (e) {
+      // Se ocorrer um erro, registra-o no console e retorna
+      console.error(e);
+      return;
+    }
+
+    // Renderiza os produtos na página
+    renderProducts(products);
+  }
+
+  // Quando a página é carregada, carrega os produtos
+  window.onload = function () {
+    loadProducts();
+  }
+
+  // Quando o usuário rola até o final da página, carrega mais produtos
+  window.onscroll = function () {
+    if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+      loadProducts();
+    }
+  };
+  </script>
+
+</body>
+
+</html>

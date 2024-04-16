@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Busca de Cotação</title>
+
+</head>
+<body>
+    <div class="modal">
+        <form>
+            <h2>Sugestão (PETR4)</h2>
+            <label for="codigo">Código da Ação:</label><br>
+            <input type="text" id="codigo" name="codigo" maxlength="5"><br>
+            <p id="cotacao"></p>
+        </form>
+    </div>
+    <script>
+        document.getElementById('codigo').addEventListener('input', function() {//Adiciona um evento de input ao campo de texto
+            let codigo = this.value; //Pega o valor do campo de texto
+            if (codigo.length == 5) { //Se o valor do campo de texto tiver 5 caracteres
+                //Faz uma requisicao para a API da Alpha Vantage
+                fetch(`https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=${codigo}.SA&apikey=ZGG8UIT7EJRZKDK9`)
+                    .then(response => response.json())//Converte a resposta de JSON para objeto em JavaScript
+                    .then(data => {//Atualiza o campo de texto com os dados recebidos da API
+                        let quote = data['Global Quote'];
+                        let cotacao = quote['05. price'];
+                        let volume = quote['06. volume'];
+                        let change = quote['09. change'];
+                        let changePercent = quote['10. change percent'];
+
+                        //Atualiza o campo de texto com os dados recebidos da API
+                        document.getElementById('cotacao').innerHTML = `
+                            <p>Cotação: ${cotacao}</p>
+                            <p>Volume: ${volume}</p>
+                            <p>Mudança: ${change} (${changePercent})</p>
+                        `;
+                    })
+                    .catch(error => console.error('Não foi encontrado nenhuma ação', error));
+            }
+        });
+    </script>
+</body>
+</html>
