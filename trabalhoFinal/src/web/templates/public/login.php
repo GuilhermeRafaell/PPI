@@ -84,7 +84,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <a class="navbar-brand" href="../../../../index.html">
                 <div class="d-flex align-items-center" id="logo-items-flex">
                     <img src="../../../assets/images/logo.jpg" class="logo" id="logo" alt="Logomarca CiniSimples">
-                    <h1 id="CliniSimples" class="ml-2">CliniSimples</h1>
+                    <h1 id="ClínicaVitalis" class="ml-2">ClínicaVitalis</h1>
                 </div>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"

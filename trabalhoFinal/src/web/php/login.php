@@ -32,7 +32,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $_SESSION["login"] = "1";
                 $_SESSION["nome"] = $dados_paciente['nome'];
                 $_SESSION["id"] = $dados_paciente['id'];
-                header("location: ../templates/private/paciente/home.php");
+                header("location: ../templates/private/paciente/homePaciente.php");
 
                 // Armazena o ID do paciente na sessão
                 // $sessionManager->set("id", $dados_paciente['id']);
