@@ -28,7 +28,7 @@ if (!isset($_SESSION["login"]) || $_SESSION["login"] !== "1") {
         <nav class="navbar navbar-expand-xl navbar-dark fixed-top" id="navbar">
             <a class="navbar-brand" href="./home.php">
                 <div class="d-flex align-items-center">
-                    <img src="../../../../assets/images/logo.jpg" class="logo" alt="Logomarca CiniSimples">
+                    <img src="../../../../assets/images/logotipo.jpg" class="logo" alt="Logomarca CiniSimples">
                     <h1 id="ClínicaVitalis" class="ml-2">ClínicaVitalis</h1>
                 </div>
             </a>

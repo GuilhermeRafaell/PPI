@@ -17,6 +17,7 @@ CREATE TABLE paciente (
 
 CREATE TABLE funcionario (
     `id` INT NOT NULL AUTO_INCREMENT,
+    `nome` VARCHAR(255) NOT NULL,
     `nome_paciente` VARCHAR(255) NOT NULL,
     `cpf` VARCHAR(14) NOT NULL,
     `data_nascimento` DATE NOT NULL,
