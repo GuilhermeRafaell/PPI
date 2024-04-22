@@ -61,6 +61,7 @@ CREATE TABLE endereco
 (
     `cep` CHAR(10) NOT NULL,
     `logradouro` VARCHAR(100),
+    `bairro` VARCHAR(100),
     `cidade` VARCHAR(50) NOT NULL,
     `estado` CHAR(2) NOT NULL,
     PRIMARY KEY (`cep`)

@@ -28,10 +28,7 @@ $cep = $_GET['cep'] ?? '';
 try {
     $sql = <<<SQL
         SELECT rua, bairro, cidade, estado
-        FROM paciente WHERE cep = ?
-        UNION
-        SELECT rua, bairro, cidade, estado
-        FROM funcionario WHERE cep = ?
+        FROM endereco WHERE cep = ?
         SQL;
 
     $stmt = $pdo->prepare($sql);
