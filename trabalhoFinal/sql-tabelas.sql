@@ -1,7 +1,7 @@
 CREATE TABLE paciente (
     `id` INT NOT NULL AUTO_INCREMENT,
     `nome` VARCHAR(255) NOT NULL,
-    `cpf` VARCHAR(15) NOT NULL,
+    `cpf` VARCHAR(14) NOT NULL,
     `data_nascimento` DATE NOT NULL,
     `sexo` VARCHAR(9) NOT NULL,
     `email` VARCHAR(255) NOT NULL,
@@ -11,8 +11,9 @@ CREATE TABLE paciente (
     `rua` VARCHAR(255) NOT NULL,
     `bairro` VARCHAR(255) NOT NULL,
     `cidade` VARCHAR(255) NOT NULL,
-    `estado` VARCHAR(255) NOT NULL,
-    PRIMARY KEY (`id`)
+    `estado` VARCHAR(2) NOT NULL,
+    PRIMARY KEY (`id`),
+    FOREIGN KEY (`cep`) REFERENCES endereco(`cep`)
 ) ENGINE = InnoDB;
 
 CREATE TABLE funcionario (
@@ -32,7 +33,8 @@ CREATE TABLE funcionario (
     `bairro` VARCHAR(255) NOT NULL,
     `cidade` VARCHAR(255) NOT NULL,
     `estado` VARCHAR(2) NOT NULL,
-    PRIMARY KEY (`id`)
+    PRIMARY KEY (`id`),
+    FOREIGN KEY (`cep`) REFERENCES endereco(`cep`)
 ) ENGINE = InnoDB;
 
 CREATE TABLE consulta (
@@ -45,7 +47,7 @@ CREATE TABLE consulta (
     `data_nascimento` DATE NOT NULL,
     `sexo` VARCHAR(10) NOT NULL,
     `email` VARCHAR(100) NOT NULL,
-    `telefone` INT(14) NOT NULL
+    `telefone` VARCHAR(20) NOT NULL
 ) ENGINE = InnoDB;
 
 CREATE TABLE agenda_funcionario (
@@ -55,9 +57,11 @@ CREATE TABLE agenda_funcionario (
     `sexo` VARCHAR(10) NOT NULL
 ) ENGINE = InnoDB;
 
-CREATE TABLE agenda_paciente (
-    `data_consulta` DATE NOT NULL,
-    `hora_consulta` VARCHAR(10) NOT NULL,
-    `nome_profissional` VARCHAR(50) NOT NULL,
-    `especialidade` VARCHAR(25) NOT NULL
-) ENGINE = InnoDB;
+CREATE TABLE endereco
+(
+    `cep` CHAR(10) NOT NULL,
+    `logradouro` VARCHAR(100),
+    `cidade` VARCHAR(50) NOT NULL,
+    `estado` CHAR(2) NOT NULL,
+    PRIMARY KEY (`cep`)
+)ENGINE = InnoDB;
