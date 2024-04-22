@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../../../assets/css/style.css">
+        <link rel="stylesheet" href="../../../assets/css/media.css">
+        <link rel="stylesheet" href="../../../assets/css/bootstrap.min.css">
+        <script src="../../../assets/js/bootstrap.bundle.min.js"></script>
+        <title>ClínicaVitalis</title>
+    </head>
+
+    <body>
+        <header>
+            <nav class="navbar navbar-expand-xl navbar-dark fixed-top"
+                id="navbar">
+                <a class="navbar-brand" href="./index.html">
+                    <div class="d-flex align-items-center">
+                        <img src="./src/assets/images/logotipo.jpg" class="logo"
+                            alt="Logomarca CiniSimples">
+                        <h1 id="ClínicaVitalis" class="ml-2">ClínicaVitalis</h1>
+                    </div>
+                </a>
+                <button class="navbar-toggler" type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavDarkDropdown"
+                    aria-controls="navbarNavDarkDropdown" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse"
+                    id="navbarNavDarkDropdown">
+                    <ul class="navbar-nav ml-auto" id="dropdownlist">
+                        <li class="nav-item active">
+                            <a class="nav-link color-white" href="#">Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle color-white"
+                                href="#" id="listarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false">
+                                Cadastrar
+                            </a>
+                            <div class="dropdown-menu" id="dropdown-menu"
+                                aria-labelledby="listarDropdown">
+                                <a class="dropdown-item" id="dropdown-item"
+                                    href="./src/web/templates/private/cadastroPaciente.html">Novo
+                                    Paciente</a>
+                                <a class="dropdown-item" id="dropdown-item"
+                                    href="./src/web/templates/private/cadastroFuncionario.html">Novo
+                                    Funcionário</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle color-white"
+                                href="#" id="listarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false">
+                                Relatórios
+                            </a>
+                            <div class="dropdown-menu" id="dropdown-menu"
+                                aria-labelledby="listarDropdown">
+                                <a class="dropdown-item" id="dropdown-item"
+                                    href="./src/web/templates/private/listaPaciente.html">Listar
+                                    Pacientes</a>
+                                <a class="dropdown-item" id="dropdown-item"
+                                    href="./src/web/templates/private/listaFuncionario.html">Listar
+                                    Funcionários</a>
+                                <a class="dropdown-item" id="dropdown-item"
+                                    href="./src/web/templates/private/listaEndereco.html">Listar
+                                    Endereços</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle color-white"
+                                href="#" id="listarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false">
+                                Agenda
+                            </a>
+                            <div class="dropdown-menu" id="dropdown-menu"
+                                aria-labelledby="listarDropdown">
+                                <a class="dropdown-item" id="dropdown-item"
+                                    href="./src/web/templates/private/listaAgendamentos.html">Listar
+                                    Agendamentos</a>
+                                <a class="dropdown-item" id="dropdown-item"
+                                    href="./src/web/templates/private/listaAgenda.html">Meus
+                                    Agendamentos</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link color-white"
+                                href="./index.html">Público</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link color-white"
+                                href="./src/web/templates/private/login.html">Login</a>
+                        </li>
+
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <div class="container">
+                <div id="homePage">
+                    <h2>ClínicaVitalis</h2>
+                    <p>A ClínicaVitalis é uma clínica comprometida com o
+                        bem-estar de seus clientes. Oferecemos
+                        serviços de psicologia, nutrição, psiquiatria e
+                        endocrinologia, abordando diversos
+                        aspectos da saúde.</p>
+                    <p>
+                        Nossa prioridade é cuidar de você com qualidade e
+                        acessibilidade, criando um ambiente inclusivo e
+                        acolhedor.
+                    </p>
+                    <p>
+                        Nossa missão é proporcionar cuidados de saúde
+                        significativos e simples para melhorar sua qualidade
+                        de vida.
+                    </p>
+                    <h2>Valores</h2>
+                    <ul>
+                        <li>Ética</li>
+                        <li>Compromisso</li>
+                        <li>Inclusão</li>
+                        <li>Responsabilidade</li>
+                    </ul>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>ClínicaVitalis - Trabalho final PPI</p>
+        </footer>
+
+        <script>
+        document.querySelector('.navbar-toggler').addEventListener('click', function () {
+            this.classList.toggle('active');
+        });
+    </script>
+    </body>
+
+</html>
+
+<!-- 
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../../assets/css/style.css">
+    <link rel="stylesheet" href="../../../../assets/css/media.css">
+    <link rel="stylesheet" href="../../../../assets/css/bootstrap.min.css">
+    <script src="../../../../assets/js/bootstrap.bundle.min.js"></script>
+    <title>Página Inicial</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-xl navbar-dark fixed-top" id="navbar">
+            <a class="navbar-brand" href="./homeFuncionario.php">
+                <div class="d-flex align-items-center">
+                    <img src="../../../../assets/images/logotipo.jpg" class="logo" alt="Logomarca CiniSimples">
+                    <h1 id="ClínicaVitalis" class="ml-2">ClínicaVitalis</h1>
+                </div>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link color-white" href="./homeFuncionario.php">Home</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link color-white" href="./perfilFuncionario.php">Perfil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link color-white" href="./agendaFuncionario.php">Agenda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link color-white" href="./pacientes.php">Pacientes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link color-white" href="../../../../../index.html">Sair</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="boas-vindas">
+                <div class="row">
+                    <h2>Olá, seja bem vindo,
+                        <?php echo htmlspecialchars($_SESSION["nome"]); ?>!
+                    </h2>
+                </div>
+                <div class="row">
+                    <h2>Como posso ajudar?</h2>
+                </div>
+                <div class=row>
+                    <div class="col-sm">
+                        <img src="../../../../assets/images/banner.png" alt="Banner" id="banner">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3">
+                        <a href="./agendaFuncionario.html">
+                            <img src="../../../../assets/images/agenda.png" alt="Sua agenda">
+                            <h3>Agenda</h3>
+                        </a>
+                    </div>
+                    <div class="col-md-3">
+                        <a href="./pacientes.html">
+                            <img src="../../../../assets/images/pacientes.png" alt="Agendar consulta">
+                            <h3>Pacientes</h3>
+                        </a>
+                    </div>
+                    <div class="col-md-3">
+                        <a href="./perfilFuncionario.html">
+                            <img src="../../../../assets/images/usuario.png" alt="Seu perfil">
+                            <h3>Perfil</h3>
+                        </a>
+                    </div>
+                    <div class="col-md-3">
+                        <a href="../../../../../index.html">
+                            <img src="../../../../assets/images/logout.png" alt="Logout">
+                            <h3>Logout</h3>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>ClínicaVitalis - Trabalho final PPI</p>
+    </footer>
+</body>
+</html> -->

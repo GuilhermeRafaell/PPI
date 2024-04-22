@@ -41,7 +41,7 @@ if (!isset($_SESSION["login"]) || $_SESSION["login"] !== "1") {
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
-                        <a class="nav-link color-white" href="./home.php">Home</a>
+                        <a class="nav-link color-white" href="./homePaciente.php">Home</a>
                     </li>
                     <li class="nav-item active">
                         <a class="nav-link color-white" href="./perfil.php">Perfil</a>
