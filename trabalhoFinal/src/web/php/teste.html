@@ -4,11 +4,12 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="../../../assets/css/style.css">
+        <link rel="stylesheet" href>
         <link rel="stylesheet" href="../../../assets/css/media.css">
         <link rel="stylesheet" href="../../../assets/css/bootstrap.min.css">
+        <script type="module" src="../../../assets/js/validaLogin.js"></script>
         <script src="../../../assets/js/bootstrap.bundle.min.js"></script>
-        <title>ClínicaVitalis</title>
+        <title>Cadastro</title>
     </head>
 
     <body>
@@ -106,43 +107,30 @@
         </header>
 
         <main>
-            <div class="container-fluid">
-                <div class="table-responsive" id="homePage">
-                    <h2 class="text-center mt-4">Funcionários</h2>
-                    <table id="table"
-                        class="table table-bordered bg-black mt-4">
-                        <thead>
-                            <tr>
-                                <th scope="col">Nome</th>
-                                <th scope="col">CPF</th>
-                                <th scope="col">Nascimento</th>
-                                <th scope="col">Sexo</th>
-                                <th scope="col">Especialidade</th>
-                                <th scope="col">CRM</th>
-                                <th scope="col">Telefone</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Dr. Ana Silva</td>
-                                <td>123.456.789-01</td>
-                                <td>10/05/1980</td>
-                                <td>Feminino</td>
-                                <td>Cardiologia</td>
-                                <td>CRMMG12345</td>
-                                <td>(34) 98765-4321</td>
-                            </tr>
-                            <tr>
-                                <td>Dr. João Santos</td>
-                                <td>987.654.321-02</td>
-                                <td>20/03/1975</td>
-                                <td>Masculino</td>
-                                <td>Ortopedia</td>
-                                <td>CRMMG54321</td>
-                                <td>(34) 98765-1234</td>
-                            </tr>
-                        </tbody>
-                    </table>
+            <div class="container">
+                <div class="pre-cadastro">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <h2>O que deseja cadastrar?</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <a href="./cadastroPaciente.html">
+                                <img src="../../../assets/images/paciente.png"
+                                    alt="Paciente">
+                                <h3>Paciente</h3>
+                            </a>
+                        </div>
+                        <div class="col-sm-6">
+                            <a href="./cadastroFuncionario.html">
+                                <img
+                                    src="../../../assets/images/funcionario.png"
+                                    alt="Funcionario">
+                                <h3>Funcionário</h3>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </main>

@@ -3,9 +3,9 @@
 function mysqlConnect()
 {
     $db_host = "sql208.infinityfree.com";
-    $db_username = "if0_35771720";
-    $db_password = "GuiRafa20";
-    $db_name = "if0_35771720_my_data_base_PPI";
+    $db_username = "if0_35771722";
+    $db_password = "092103ea";
+    $db_name = "if0_35771722_trabalhofinal";
 
     // dsn é apenas um acrônimo de database source name
     $dsn = "mysql:host=$db_host;dbname=$db_name;charset=utf8mb4";

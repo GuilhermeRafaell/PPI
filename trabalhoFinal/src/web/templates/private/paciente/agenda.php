@@ -9,7 +9,11 @@ $pdo = mysqlConnect();
 $id_paciente = $sessionManager->get("id");
 
 // Consulta para obter as consultas com base no id_paciente
-$consulta_paciente = "SELECT * FROM consulta WHERE id_paciente = ?";
+$consulta_paciente = "SELECT C.data_consulta, C.hora_consulta, F.nome as nome_funcionario, F.especialidade
+FROM AGENDA C 
+JOIN paciente P ON P.NOME = C.nome_paciente
+JOIN funcionario F on F.ID = C.id_funcionario
+WHERE P.ID = ?";
 $stmt_consultaPaciente = $pdo->prepare($consulta_paciente);
 $stmt_consultaPaciente->execute([$id_paciente]);
 
@@ -34,7 +38,7 @@ $stmt_consultaPaciente->execute([$id_paciente]);
         <nav class="navbar navbar-expand-xl navbar-dark fixed-top" id="navbar">
             <a class="navbar-brand" href="./home.php">
                 <div class="d-flex align-items-center">
-                    <img src="../../../../assets/images/logo.jpg" class="logo" alt="Logomarca CiniSimples">
+                    <img src="../../../../assets/images/logotipo.jpg" class="logo" alt="Logomarca CiniSimples">
                     <h1 id="ClínicaVitalis" class="ml-2">ClínicaVitalis</h1>
                 </div>
             </a>
@@ -70,23 +74,6 @@ $stmt_consultaPaciente->execute([$id_paciente]);
         <div class="container">
             <div class="agendamento">
                 <h2>Agendamentos</h2>
-                <form>
-                    <div class="row">
-                        <div class="col-sm-12 d-flex">
-                            <div class="form-floating flex-grow-1" id="pesquisa">
-                                <input class="form-control" type="text" id="nome" placeholder=" ">
-                                <label for="nome">Pesquisar...</label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col">
-                            <button class="btn btn-success col-sm-2" id="botao-pesquisa">Buscar</button>
-                        </div>
-                    </div>
-                </form>
-
-
                 <table class="table table-striped table-sm text-center">
                     <thead>
                         <tr class="text-center table-success">
@@ -101,9 +88,9 @@ $stmt_consultaPaciente->execute([$id_paciente]);
                         while ($consulta = $stmt_consultaPaciente->fetch(PDO::FETCH_ASSOC)) {
                             echo "<tr>";
                             echo "<td>" . (isset($consulta['data_consulta']) ? $consulta['data_consulta'] : '') . "</td>";
-                            echo "<td>" . (isset($consulta['horario_consulta']) ? $consulta['horario_consulta'] : '') . "</td>";
+                            echo "<td>" . (isset($consulta['hora_consulta']) ? $consulta['hora_consulta'] : '') . "</td>";
                             echo "<td>" . (isset($consulta['especialidade']) ? $consulta['especialidade'] : '') . "</td>";
-                            echo "<td>" . (isset($consulta['nome_profissional']) ? $consulta['nome_profissional'] : '') . "</td>";
+                            echo "<td>" . (isset($consulta['nome_funcionario']) ? $consulta['nome_funcionario'] : '') . "</td>";
                             echo "</tr>";
                         }
                     } else {

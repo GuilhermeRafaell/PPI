@@ -1,3 +1,14 @@
+<?php
+
+require_once "./conexao.php";
+session_start();
+if (!isset($_SESSION["login"]) || $_SESSION["login"] !== "1") {
+    header("Location: login.php");
+    exit();
+}
+$pdo = mysqlConnect();
+
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -8,85 +19,52 @@
     <link rel="stylesheet" href="../../../assets/css/formulario.css">
     <link rel="stylesheet" href="../../../assets/css/media.css">
     <link rel="stylesheet" href="../../../assets/css/bootstrap.min.css">
-    <script type="module" src="../../../assets/js/validaCadastroPaciente.js"></script>
+    <script type="module" src="../../../assets/js/validaCadastroFuncionario.js"></script>
+    <script src="../../../assets/js/conselhoRegional.js"></script>
     <script src="../../../assets/js/bootstrap.bundle.min.js"></script>
-    <title>Cadastro paciente</title>
+
+    <title>Cadastro funcionário</title>
 </head>
 
 <body>
     <header>
         <nav class="navbar navbar-expand-xl navbar-dark fixed-top" id="navbar">
-            <a class="navbar-brand" href="./index.html">
+            <a class="navbar-brand" href="../../../../index.html">
                 <div class="d-flex align-items-center">
-                    <img src="../../../assets/images/logotipo.jpg" id="logo" class="logo" alt="Logomarca CiniSimples">
+                    <img src="../../../assets/images/logotipo.jpg" class="logo" alt="Logomarca CiniSimples">
                     <h1 id="ClínicaVitalis" class="ml-2">ClínicaVitalis</h1>
                 </div>
             </a>
-            <button class="navbar-toggler"  type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false"
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-            <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
-                <ul class="navbar-nav ml-auto" id="dropdownlist">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
-                        <a class="nav-link color-white" href="../../../../index_2.html">Home</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle color-white" href="#" id="listarDropdown" role="button"
-                            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Cadastrar
-                        </a>
-                        <div class="dropdown-menu" id="dropdown-menu" aria-labelledby="listarDropdown">
-                            <a class="dropdown-item" id="dropdown-item" href="./cadastroPaciente.html">Novo
-                                Paciente</a>
-                            <a class="dropdown-item" id="dropdown-item" href="./cadastroFuncionario.html">Novo
-                                Funcionário</a>
-                        </div>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle color-white" href="#" id="listarDropdown" role="button"
-                            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Relatórios
-                        </a>
-                        <div class="dropdown-menu" id="dropdown-menu" aria-labelledby="listarDropdown">
-                            <a class="dropdown-item" id="dropdown-item" href="./listaPaciente.html">Listar
-                                Pacientes</a>
-                            <a class="dropdown-item" id="dropdown-item" href="./listaFuncionario.html">Listar
-                                Funcionários</a>
-                            <a class="dropdown-item" id="dropdown-item" href="./listaEndereco.html">Listar
-                                Endereços</a>
-                        </div>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle color-white" href="#" id="listarDropdown" role="button"
-                            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Agenda
-                        </a>
-                        <div class="dropdown-menu" id="dropdown-menu" aria-labelledby="listarDropdown">
-                            <a class="dropdown-item" id="dropdown-item" href="./listaAgendamentos.html">Listar Agendamentos</a>
-                            <a class="dropdown-item" id="dropdown-item" href="./listaAgenda.html">Meus
-                                Agendamentos</a>
-                        </div>
+                        <a class="nav-link color-white" href="../../../../index.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link color-white" href="../../../../index.html">Público</a>
+                        <a class="nav-link color-white" href="./sobre.html">Sobre</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link color-white" href="./cadastro.html">Cadastro</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link color-white" href="./login.html">Login</a>
                     </li>
-
                 </ul>
             </div>
         </nav>
     </header>
 
     <main>
-        <form action="../../php/cadastroPaciente.php" method="POST">
+        <form action="../../php/cadastroFuncionario.php" method="POST">
             <div class="container">
                 <div class="cadastro">
-                    <h3>Cadastro paciente</h3>
+                    <h3>Cadastro funcionário</h3>
 
                     <fieldset>
                         <legend>Dados pessoais</legend>
@@ -124,7 +102,6 @@
                             </div>
 
                             <div class="col-sm-6">
-                                <div class ="form-floating">
                                 <select name="sexo" id="sexo" class="form-select">
                                     <option value="">Sexo</option>
                                     <option value="Masculino">Masculino</option>
@@ -133,7 +110,6 @@
                                 </select>
                                 <div class="alert alert-danger alert-dismissible" id="alertaSexo">
                                     <span>O sexo deve ser preenchido!</span>
-                                </div>
                                 </div>
                             </div>
                         </div>
@@ -160,7 +136,32 @@
                         </div>
                     </fieldset>
 
-
+                    <fieldset>
+                        <legend>Dados profissionais</legend>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <select name="especialidade" id="especialidade" class="form-select">
+                                    <option value="">Especialidade</option>
+                                    <option value="nutricionista">Nutricionista</option>
+                                    <option value="psicologo">Psicólogo</option>
+                                    <option value="endocrinologista">Endócrinologista</option>
+                                    <option value="psiquiatra">Psiquiatra</option>
+                                </select>
+                                <div class="alert alert-danger alert-dismissible" id="alertaEspecialidade">
+                                    <span>A especialidade deve ser preenchida!</span>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-floating">
+                                    <input class="form-control" type="text" id="regpro" name="regpro" placeholder=" ">
+                                    <label for="regpro">Registro profissional</label>
+                                    <div class="alert alert-danger alert-dismissible" id="alertaRegpro">
+                                        <span>O registro profissional dever ser preenchido!</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
 
                     <fieldset>
                         <legend>Telefone de contato</legend>
@@ -169,7 +170,7 @@
                                 <div class="form-floating">
                                     <input class="form-control" type="text" id="telefone" name="telefone"
                                         placeholder=" ">
-                                    <label for="telefone">Telefone</label>
+                                    <label for="rua">Telefone</label>
                                     <div class="alert alert-danger alert-dismissible" id="alertaTelefone">
                                         <span>O telefone deve ser preenchido!</span>
                                     </div>
@@ -222,7 +223,6 @@
                                 </div>
                             </div>
                             <div class="col-sm-6">
-                                <div class="form-floating">
                                 <select class="form-select" name="estado" id="estado">
                                     <option value=""> Estado</option>
                                     <option value="AC">Acre</option>
@@ -256,7 +256,6 @@
                                 <div class="alert alert-danger alert-dismissible" id="alertaEstado">
                                     <span>O estado deve ser selecionado!</span>
                                 </div>
-                                </div>
                             </div>
                         </div>
                     </fieldset>
@@ -272,6 +271,14 @@
     </footer>
 
     <script href="../../../assets/js/ajaxBuscaEndereco.js"></script>
+    <script>
+        window.addEventListener("DOMContentLoaded", init);
+
+        function init() {
+        const inputCep = document.querySelector("#cep");
+            inputCep.onkeyup = () => buscaEndereco(inputCep.value);
+        }
+    </script>
 </body>
 
 </html>

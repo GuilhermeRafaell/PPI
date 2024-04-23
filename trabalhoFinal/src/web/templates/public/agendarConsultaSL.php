@@ -1,5 +1,5 @@
 <?php
-require "../../../php/conexao.php";
+require "../../php/conexao.php";
 $pdo = mysqlConnect();
 
 // Consulta para obter todos os funcionarios
@@ -14,12 +14,12 @@ $stmt_funcionario = $pdo->query($funcionarios);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../../../assets/css/style.css">
-    <link rel="stylesheet" href="../../../../assets/css/formulario.css">
-    <link rel="stylesheet" href="../../../../assets/css/media.css">
-    <link rel="stylesheet" href="../../../../assets/css/bootstrap.min.css">
-    <script type="module" src="../../../../assets/js/validaAgendamento.js"></script>
-    <script src="../../../../assets/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="../../../assets/css/style.css">
+    <link rel="stylesheet" href="../../../assets/css/formulario.css">
+    <link rel="stylesheet" href="../../../assets/css/media.css">
+    <link rel="stylesheet" href="../../../assets/css/bootstrap.min.css">
+    <script type="module" src="../../../assets/js/validaAgendamento.js"></script>
+    <script src="../../../assets/js/bootstrap.bundle.min.js"></script>
     <title>Agendar Consulta</title>
 </head>
 
@@ -28,7 +28,7 @@ $stmt_funcionario = $pdo->query($funcionarios);
         <nav class="navbar navbar-expand-xl navbar-dark fixed-top" id="navbar">
             <a class="navbar-brand" href="./home.php">
                 <div class="d-flex align-items-center">
-                    <img src="../../../../assets/images/logotipo.jpg" class="logo" alt="Logomarca CiniSimples">
+                    <img src="../../../assets/images/logotipo.jpg" class="logo" alt="Logomarca CiniSimples">
                     <h1 id="ClínicaVitalis" class="ml-2">ClínicaVitalis</h1>
                 </div>
             </a>
@@ -41,20 +41,23 @@ $stmt_funcionario = $pdo->query($funcionarios);
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
-                        <a class="nav-link color-white" href="./homePaciente.php">Home</a>
+                        <a class="nav-link color-white" href="../../../../index.html">Home</a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link color-white" href="./perfil.php">Perfil</a>
+                        <a class="nav-link color-white" href="../../templates/public/galeria.html">Galeria</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link color-white" href="./agenda.php">Agendamentos</a>
+                        <a class="nav-link color-white" href="./agendarConsultaSL.php">Agendar consulta</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link color-white" href="./agendarConsulta.php">Agendar consulta</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link color-white" href="../../../../../index.html">Sair</a>
-                    </li>
+                        <li class="nav-item">
+                            <a class="nav-link color-white"
+                                href="../../templates/public/cadastroEndereco.html">Novo
+                                Endereço</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link color-white"
+                                href="../../templates/public/login.html">Login</a>
+                        </li>
                 </ul>
             </div>
         </nav>
@@ -64,7 +67,7 @@ $stmt_funcionario = $pdo->query($funcionarios);
         <div class="container">
             <div class="agendamento">
                 <h3>Agendar Consultaaa</h3>
-                <form action="../../../php/agendarConsulta.php" method="POST">
+                <form action="../../../php/agendarConsultaSL.php" method="POST">
                     <fieldset>
                         <legend>Informações da consulta</legend>
 

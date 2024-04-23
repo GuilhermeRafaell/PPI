@@ -84,13 +84,13 @@ if (!isset($_SESSION["login"]) || $_SESSION["login"] !== "1") {
                         </a>
                     </div>
                     <div class="col-md-3">
-                        <a href="./agendarConsulta.html">
+                        <a href="./agendarConsulta.php">
                             <img src="../../../../assets/images/agendarConsulta.png" alt="Agendar consulta">
                             <h3>Agendar consulta</h3>
                         </a>
                     </div>
                     <div class="col-md-3">
-                        <a href="./perfil.html">
+                        <a href="./perfil.php">
                             <img src="../../../../assets/images/usuario.png" alt="Perfil">
                             <h3>Perfil</h3>
                         </a>
