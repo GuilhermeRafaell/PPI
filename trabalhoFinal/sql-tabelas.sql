@@ -57,6 +57,13 @@ CREATE TABLE agenda_funcionario (
     `sexo` VARCHAR(10) NOT NULL
 ) ENGINE = InnoDB;
 
+CREATE TABLE agenda_paciente (
+    `data_consulta` DATE NOT NULL,
+    `hora_consulta` VARCHAR(10) NOT NULL,
+    `nome_profissional` VARCHAR(50) NOT NULL,
+    `especialidade` VARCHAR(25) NOT NULL
+) ENGINE = InnoDB;
+
 CREATE TABLE endereco
 (
     `cep` CHAR(10) NOT NULL,
