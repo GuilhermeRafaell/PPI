@@ -32,9 +32,7 @@ $stmt_funcionario = $pdo->query($funcionarios);
                     <h1 id="ClínicaVitalis" class="ml-2">ClínicaVitalis</h1>
                 </div>
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
@@ -46,18 +44,14 @@ $stmt_funcionario = $pdo->query($funcionarios);
                     <li class="nav-item active">
                         <a class="nav-link color-white" href="../../templates/public/galeria.html">Galeria</a>
                     </li>
+
                     <li class="nav-item">
-                        <a class="nav-link color-white" href="./agendarConsultaSL.php">Agendar consulta</a>
+                        <a class="nav-link color-white" href="../../templates/public/cadastroEndereco.html">Novo
+                            Endereço</a>
                     </li>
-                        <li class="nav-item">
-                            <a class="nav-link color-white"
-                                href="../../templates/public/cadastroEndereco.html">Novo
-                                Endereço</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link color-white"
-                                href="../../templates/public/login.html">Login</a>
-                        </li>
+                    <li class="nav-item">
+                        <a class="nav-link color-white" href="../../templates/public/login.html">Login</a>
+                    </li>
                 </ul>
             </div>
         </nav>
@@ -76,7 +70,7 @@ $stmt_funcionario = $pdo->query($funcionarios);
                             <div class="col-sm-6">
                                 <select class="form-select" name="id" id="id">
                                     <option value="">Profissional</option>
-                                    <?php foreach ($stmt_funcionario as $funcionario): ?>
+                                    <?php foreach ($stmt_funcionario as $funcionario) : ?>
                                         <option value="<?php echo $funcionario['id']; ?>">
                                             <?php echo $funcionario['nome']; ?> -
                                             <?php echo $funcionario['especialidade']; ?>
@@ -145,8 +139,7 @@ $stmt_funcionario = $pdo->query($funcionarios);
                         <div class="row">
                             <div class="col-sm-6">
                                 <div class="form-floating">
-                                    <input class="form-control" type="text" id="nome_paciente" name="nome_paciente"
-                                        placeholder=" ">
+                                    <input class="form-control" type="text" id="nome_paciente" name="nome_paciente" placeholder=" ">
                                     <label for="nome_paciente">Nome</label>
 
                                     <div class="alert alert-danger alert-dismissible" id="alertaNome">
@@ -196,8 +189,7 @@ $stmt_funcionario = $pdo->query($funcionarios);
                             </div>
                             <div class="col-sm-6">
                                 <div class="form-floating">
-                                    <input class="form-control" type="tel" id="telefone" name="telefone"
-                                        placeholder=" ">
+                                    <input class="form-control" type="tel" id="telefone" name="telefone" placeholder=" ">
                                     <label for="telefone">Telefone</label>
                                     <div class="alert alert-danger alert-dismissible" id="alertaTelefone">
                                         <span>O telefone deve ser preenchido!</span>
@@ -217,4 +209,5 @@ $stmt_funcionario = $pdo->query($funcionarios);
         <p>ClínicaVitalis - Trabalho final PPI</p>
     </footer>
 </body>
+
 </html>
